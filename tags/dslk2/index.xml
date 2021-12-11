@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dslk2 on FITHOU-UnderWorld</title>
+    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/dslk2/</link>
+    <description>Recent content in dslk2 on FITHOU-UnderWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/dslk2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Danh Sách Liên Kết Đôi </title>
+      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</guid>
+      <description>#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; struct NODE{ int data; NODE *next; }; int main(){ NODE *head = new NODE(); head-&amp;gt;data = 1; head-&amp;gt;next = NULL; NODE *second = new NODE(); second-&amp;gt;data = 2; head-&amp;gt;next = NULL; NODE *third = new NODE(); third-&amp;gt;data = 3; head-&amp;gt;next = NULL; //liên kết các node lại với nhau head-&amp;gt;next = second; second-&amp;gt;next = third; //truy cập phần tử int data = head-&amp;gt;data; cout&amp;lt;&amp;lt;data&amp;lt;&amp;lt;endl; //truy cập đến tất cả các phần tử trong NODE NODE *p = head; while(p!</description>
+    </item>
+    
+  </channel>
+</rss>

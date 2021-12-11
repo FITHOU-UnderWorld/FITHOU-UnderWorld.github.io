@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="FITHOU-UnderWorld">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg">
+    <meta property="twitter:image" content="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg" />
+    
+
+    
+    <meta name="title" content="Thực Hành C&#43;&#43;" />
+    <meta property="og:title" content="Thực Hành C&#43;&#43;" />
+    <meta property="twitter:title" content="Thực Hành C&#43;&#43;" />
+    
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/favicon.ico">
+
+    <title>Thực Hành C&#43;&#43;-MHN-BT | MHN-BT</title>
+
+    <link rel="canonical" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/">
+
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/jquery.min.js"></script>
+
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/bootstrap.min.js"></script>
+
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/">FITHOU-UnderWorld</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/csdl">csdl</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/cslt">cslt</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ctdl">ctdl</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/lhdt">lhdt</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ltdd">ltdd</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ltweb">ltweb</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/mang">mang</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/trr">trr</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/cslt" title="cslt">
+                            cslt
+                        </a>
+                        
+                        <a class="tag" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/thuchanhc&#43;&#43;" title="thuchanhc&#43;&#43;">
+                            thuchanhc&#43;&#43;
+                        </a>
+                        
+                    </div>
+                    <h1>Thực Hành C&#43;&#43;</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     mhn-bt
+                             
+                            on 
+                            Saturday, December 11, 2021
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="bài-tập-thực-hành-môn-lập-trình-cơ-sở">bài tập thực hành môn lập trình cơ sở</h2>
+<blockquote>
+<p>mọi người xem rồi code lại cho nhớ nhé.</p>
+</blockquote>
+<h3 id="buoi-1">BUOI 1</h3>
+<p>Bai 1</p>
+<pre><code>#include &quot;bits/stdc++.h&quot;
+using namespace std;
+int main()
+{
+    float s, v;
+    int t;
+
+    cout&lt;&lt;&quot;Nhap vao Quang duong: &quot;;
+    cin&gt;&gt;s;
+    cout&lt;&lt;&quot;Nhap vao Thoi gian: &quot;;
+    cin&gt;&gt;t;
+
+    v = s/t;
+    cout&lt;&lt;&quot;Van toc la: &quot;&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;v;
+    return 0;
+}
+</code></pre><p>Bai 2</p>
+<pre><code>#include &quot;bits/stdc++.h&quot;
+using namespace std;
+int main()
+{
+    string MaHS;
+    string HoTen;
+    string NgaySinh;
+    string Lop;
+    int SoBuoiAnBanTru;
+    int SoTienAnBanTru;
+
+    cout&lt;&lt;&quot;Nhap Ma Hoc Sinh: &quot;;
+    fflush(stdin);
+    getline(std::cin,MaHS);
+
+    cout&lt;&lt;&quot;Nhap Ho Ten Hoc Sinh: &quot;;
+    fflush(stdin);
+    getline(std::cin,HoTen);
+
+    cout&lt;&lt;&quot;Nhap Ngay Sinh: &quot;;
+    fflush(stdin);
+    getline(std::cin,NgaySinh);
+
+    cout&lt;&lt;&quot;Nhap Lop: &quot;;
+    fflush(stdin);
+    getline(std::cin,Lop);
+
+    cout&lt;&lt;&quot;Nhap So Buoi An Ban Tru: &quot;;
+    fflush(stdin);
+    cin&gt;&gt;SoBuoiAnBanTru;
+
+    // tinnh toan so tien an theo buoi
+    SoTienAnBanTru = SoBuoiAnBanTru * 25000;
+
+    cout&lt;&lt;&quot;=============================&quot;&lt;&lt;endl;
+    cout&lt;&lt;&quot;Ma Hoc Sinh: &quot;&lt;&lt;MaHS&lt;&lt;endl;
+    cout&lt;&lt;&quot;Ho Ten Hoc Sinh: &quot;&lt;&lt;HoTen&lt;&lt;endl;
+    cout&lt;&lt;&quot;Ngay Sinh Hoc Sinh: &quot;&lt;&lt;NgaySinh&lt;&lt;endl;
+    cout&lt;&lt;&quot;Lop: &quot;&lt;&lt;Lop&lt;&lt;endl;
+    cout&lt;&lt;&quot;So Buoi An Ban Tru: &quot;&lt;&lt;SoBuoiAnBanTru&lt;&lt;endl;
+    cout&lt;&lt;&quot;So Tien An Ban Tru: &quot;&lt;&lt;SoTienAnBanTru&lt;&lt;endl;
+
+}
+</code></pre><p>bai 3</p>
+<pre><code>#include &quot;bits/stdc++.h&quot;
+using namespace std;
+int main()
+{
+    int n;
+    cout&lt;&lt;&quot;Nhap vao N: &quot;; cin&gt;&gt;n;
+    cout&lt;&lt;&quot;Tong cua N la: &quot;&lt;&lt;(n/10) + (n%10);
+}
+</code></pre><p>bai 4</p>
+<pre><code>#include &quot;bits/stdc++.h&quot;
+using namespace std;
+int main()
+{
+    string HoTen;
+    float TienCong;
+    int SoNgayLamViec;
+    float TienTamUng;
+    float SoTienDuocHuong;
+    float SoTienConLinh;
+    
+    cout&lt;&lt;&quot;Ho Ten: &quot;;
+    fflush(stdin);
+    getline(std::cin,HoTen);
+    
+    cout&lt;&lt;&quot;Tien cong: &quot;;
+    cin&gt;&gt;TienCong;
+    
+    cout&lt;&lt;&quot;So ngay lam viec: &quot;;
+    cin&gt;&gt;SoNgayLamViec;
+    
+    cout&lt;&lt;&quot;Tien tam ung: &quot;;
+    cin&gt;&gt;TienTamUng;
+    
+    //tinh toan
+    SoTienDuocHuong = TienCong * SoNgayLamViec;
+    
+    SoTienConLinh = SoTienDuocHuong - TienTamUng;
+    
+    cout&lt;&lt;&quot;Ong/Ba: &quot;&lt;&lt;HoTen&lt;&lt;endl;
+    cout&lt;&lt;&quot;So tien luong duoc huong: &quot;&lt;&lt;SoTienDuocHuong&lt;&lt;endl;
+    cout&lt;&lt;&quot;So tien da tam ung: &quot;&lt;&lt;TienTamUng&lt;&lt;endl;
+    cout&lt;&lt;&quot;So tien con duoc linh: &quot;&lt;&lt;SoTienConLinh&lt;&lt;endl;
+}
+</code></pre><h3 id="buoi-2">BUOI 2</h3>
+<p>bai 5</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+using namespace std;
+/*
+Nhập vào số có 3 chữ số:
+- tìm số lớn nhất trong 3 chữ số và vị trí của nó!
+ví dụ:
+- Input: 123
+- Output: 3 là số lớn nhất; vị trí: hàng đơn vị
+*/
+int main()
+{
+	int a,b,c,n,max;
+	cout&lt;&lt;&quot;nhap so nguyen ca 3 chu so n:&quot;;cin&gt;&gt;n;
+	a=n/100;
+	b=(n%100)/10;
+	c=(n%100)%10;
+   /* max=(a&gt;b?(a&gt;c?a:c):(b&gt;c?b:c));
+    cout &lt;&lt;&quot;chu so lon nhat trong n la&quot;&lt;&lt;max&lt;&lt;endl;*/
+    if (a&gt;=b&amp;&amp;a&gt;=c)
+    cout&lt;&lt;&quot;so lon nhat o hang tram :&quot;&lt;&lt;a&lt;&lt;endl;
+    else if (b&gt;=a&amp;&amp;b&gt;=c)
+    cout&lt;&lt;&quot;so lon nhat o hang chuc:&quot;&lt;&lt;b&lt;&lt;endl;
+    else
+    cout&lt;&lt;&quot;so lon nhat o hang don vi:&quot;&lt;&lt;c&lt;&lt;endl;
+
+}
+</code></pre><p>bai 7</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+/*
+Năm nhuận là năm có tháng 2 gồm 29 ngày, để xét một
+năm có phải là năm nhuận không người ta kiểm tra bằng cách xem năm đó có chia
+hết cho 4 đồng thời không chia hết cho 100 hoặc năm đó chia hết cho 400 hay không?
+Hãy viết chương trình nhập vào một năm. Hiện ra màn hình thông báo năm đó có
+phải là năm nhuận hay không?
+*/
+int main()
+{
+    int n;
+    cout&lt;&lt;&quot;Nhap vao mot nam :&quot;;
+    cin&gt;&gt;n;
+    if(n%4==0||n%100==0||n%400==0)
+        cout&lt;&lt;&quot;Nam vua nhap la nam nhuan&quot;;
+    else
+        cout&lt;&lt;&quot;Nam vua nhap khong phai nam nhuan&quot;;
+}
+</code></pre><p>bai 11</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+    int n, m;
+    while(n&lt;1 || n&gt;12){
+        cout&lt;&lt;&quot;Nhap n trong khoang [1&gt;12]: &quot;;
+        cin&gt;&gt;n;
+    }
+    cout&lt;&lt;&quot;Nhap m: &quot;;
+    cin&gt;&gt;m;
+    switch(n){
+        case 1:
+            cout&lt;&lt;&quot;Thang gieng co 31 ngay!&quot;;
+            break;
+        case 2:
+            if(m%4==0||m%100==0||m%400==0){
+                cout&lt;&lt;&quot;Thang hai co 29 ngay!&quot;;
+            }else{
+                cout&lt;&lt;&quot;Thang hai co 28 ngay!&quot;;
+            }
+
+            break;
+        case 3:
+            cout&lt;&lt;&quot;Thang ba co 31 ngay!&quot;;
+            break;
+        case 4:
+            cout&lt;&lt;&quot;Thang tu co 30 ngay!&quot;;
+            break;
+        case 5:
+            cout&lt;&lt;&quot;Thang nam co 31 ngay!&quot;;
+            break;
+        case 6:
+            cout&lt;&lt;&quot;Thang sau co 30 ngay!&quot;;
+            break;
+        case 7:
+            cout&lt;&lt;&quot;Thang bay co 31 ngay!&quot;;
+            break;
+        case 8:
+            cout&lt;&lt;&quot;Thang tam co 31 ngay!&quot;;
+            break;
+        case 9:
+            cout&lt;&lt;&quot;Thang chin co 30 ngay!&quot;;
+            break;
+        case 10:
+            cout&lt;&lt;&quot;Thang muoi co 31 ngay!&quot;;
+            break;
+        case 11:
+            cout&lt;&lt;&quot;Thang muoi mot co 30 ngay!&quot;;
+            break;
+        case 12:
+            cout&lt;&lt;&quot;Thang muoi hai co 31 ngay!&quot;;
+            break;
+        default:
+            cout&lt;&lt;&quot;n o trong khoang [1-&gt;12]: &quot;;
+    }
+}
+</code></pre><p>bai 14</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    float n, i;
+    float s=0;
+    cout&lt;&lt;&quot;Nhap N:&quot;;
+    cin&gt;&gt;n;
+    for(i=1;i&lt;=n;i++){
+            s+= 1/((i*2) - 1);
+    }
+    cout&lt;&lt;s;
+
+}
+</code></pre><h3 id="buoi-3">BUOI 3</h3>
+<p>bai 21</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+	float a[100][100],t,s=0,x;
+	int i,n,m,j,k,h,c;
+	cout&lt;&lt;&quot;Nhap so hang: &quot;;cin&gt;&gt;n;
+	cout&lt;&lt;&quot;Nhap so cot: &quot;;cin&gt;&gt;m;
+	cout&lt;&lt;&quot;Nhap phan tu:&quot;&lt;&lt;endl;
+	for (i=0;i&lt;n;i++) 
+    {
+		for (j=0;j&lt;m;j++) 
+        {
+			cout&lt;&lt;&quot;a[&quot;&lt;&lt;i&lt;&lt;&quot;][&quot;&lt;&lt;j&lt;&lt;&quot;]= &quot;;
+            cin&gt;&gt;a[i][j];
+		}
+	}
+	cout&lt;&lt;&quot;Mang nhu sau: &quot;;
+	for (i=0;i&lt;n;i++) 
+    {
+		cout&lt;&lt;endl;
+		for (j=0;j&lt;m;j++)
+        {
+			cout&lt;&lt;setw(5)&lt;&lt;a[i][j];
+		}
+	}
+	cout&lt;&lt;endl;
+	cout&lt;&lt;&quot;Nhap k: &quot;;cin&gt;&gt;k;
+	cout&lt;&lt;&quot;Cac phan tu tai hang &quot;&lt;&lt;k&lt;&lt;&quot; la:&quot;;
+		for (i=0;i&lt;n;i++) 
+        {
+			for (j=0;j&lt;m;j++)
+            {
+				if (i==k)
+                {
+					cout&lt;&lt;setw(5)&lt;&lt;a[i-1][j];
+				}
+			}
+	}
+	
+    for (i=0;i&lt;n;i++) 
+    {
+		for (j=0;j&lt;m;j++)
+			if (j==k) 
+                {
+					s+=a[i][j-1];
+				}
+			}
+	cout&lt;&lt;&quot;\nTong la: &quot;&lt;&lt;s;
+	cout&lt;&lt;&quot;\nNhap gia tri can tim: &quot;;cin&gt;&gt;x;
+	for (i=0;i&lt;n;i++) 
+    {
+		for (j=0;j&lt;m;j++)
+			if (a[i][j]==x) 
+            {
+				cout&lt;&lt;&quot;Vi tri dau tien xuat hien &quot;&lt;&lt;x&lt;&lt;&quot; la hang &quot;&lt;&lt;i+1&lt;&lt;&quot; cot &quot;&lt;&lt;j+1;
+            }
+	}
+}
+</code></pre><p>bai 19</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+int main()
+
+{
+    int dv,ch,tr;
+    int n;
+cout&lt;&lt;&quot;Nhap so nguyen duong &lt;10000 :\n&quot;; cin&gt;&gt;n;
+
+cout&lt;&lt;&quot;So &quot;&lt;&lt;n&lt;&lt;&quot; doi sang so La ma la :\n&quot;;
+
+tr=n/100; n=n%100; ch=n/10; dv=n%10;
+
+switch (tr)
+
+{
+case 1:cout&lt;&lt;&quot;C&quot;;break;
+
+case 2:cout&lt;&lt;&quot;CC&quot;;break;
+
+case 3:cout&lt;&lt;&quot;CCC&quot;;break;
+
+case 4:cout&lt;&lt;&quot;CD&quot;;break;
+
+case 5:cout&lt;&lt;&quot;D&quot;;break;
+
+case 6:cout&lt;&lt;&quot;DC&quot;;break;
+
+case 7:cout&lt;&lt;&quot;DCC&quot;;break;
+
+case 8:cout&lt;&lt;&quot;DCCC&quot;;break;
+
+case 9:cout&lt;&lt;&quot;CM&quot;;
+
+}
+
+switch (ch)
+
+{
+case 1:cout&lt;&lt;&quot;X&quot;;break;
+
+case 2:cout&lt;&lt;&quot;XX&quot;;break;
+
+case 3:cout&lt;&lt;&quot;XXX&quot;;break;
+
+case 4:cout&lt;&lt;&quot;XL&quot;;break;
+
+case 5:cout&lt;&lt;&quot;L&quot;;break;
+
+case 6:cout&lt;&lt;&quot;LX&quot;;break;
+
+case 7:cout&lt;&lt;&quot;LXX&quot;;break;
+
+case 8:cout&lt;&lt;&quot;LXXX&quot;;break;
+
+case 9:cout&lt;&lt;&quot;XC&quot;;
+
+}
+
+switch (dv)
+
+{
+ case 1:cout&lt;&lt;&quot;I&quot;;break;
+
+ case 2:cout&lt;&lt;&quot;II&quot;;break;
+
+ case 3:cout&lt;&lt;&quot;III&quot;;break;
+
+ case 4:cout&lt;&lt;&quot;IV&quot;;break;
+
+ case 5:cout&lt;&lt;&quot;V&quot;;break;
+
+ case 6:cout&lt;&lt;&quot;VI&quot;;break;
+
+ case 7:cout&lt;&lt;&quot;VII&quot;;break;
+
+ case 8:cout&lt;&lt;&quot;VIII&quot;;break;
+
+ case 9:cout&lt;&lt;&quot;IX&quot;;
+
+}
+
+}
+</code></pre><p>bai 21</p>
+<pre><code>Bai21.txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+1 KB
+Bộ nhớ đã sử dụng
+1 KB
+Vị trí
+Buoi_3
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+26 thg 10, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:04 do tôi thực hiện
+Người tạo
+22 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+	float a[100][100],t,s=0,x;
+	int i,n,m,j,k,h,c;
+	cout&lt;&lt;&quot;NHAP SO HANG CUA MANG:&quot;;cin&gt;&gt;n;
+	cout&lt;&lt;&quot;NHAP SO COT CUA MANG:&quot;;cin&gt;&gt;m;
+	cout&lt;&lt;&quot;NHAP MANG:&quot;&lt;&lt;endl;
+	for (i=0;i&lt;n;i++) {
+		for (j=0;j&lt;m;j++) {
+			cout&lt;&lt;&quot;a[&quot;&lt;&lt;i&lt;&lt;&quot;]=&quot;;cin&gt;&gt;a[i][j];
+		}
+	}
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;&quot;MANG VUA NHAP LA: &quot;;
+	for (i=0;i&lt;n;i++) {
+		cout&lt;&lt;endl;
+		for (j=0;j&lt;m;j++){
+
+			cout&lt;&lt;setw(5)&lt;&lt;a[i][j];
+		}
+	}
+	cout&lt;&lt;endl;
+	cout&lt;&lt;&quot;NHAP k: &quot;;cin&gt;&gt;k;
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;&quot;CAC PHAN TU  TAI HANG THU &quot;&lt;&lt;k&lt;&lt;&quot; LA:&quot;;
+		for (i=0;i&lt;n;i++) {
+			for (j=0;j&lt;m;j++){
+				if (i==k){
+					cout&lt;&lt;setw(5)&lt;&lt;a[i-1][j];
+				}
+			}
+	}
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+			for (i=0;i&lt;n;i++) {
+				for (j=0;j&lt;m;j++)
+				if (j==k) {
+					s+=a[i][j];
+
+				}
+			}
+	cout&lt;&lt;&quot;TONG CAN TIM LA: &quot;&lt;&lt;s;
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;&quot;NHAP GIA TRI MUON TIM KIEM : &quot;;cin&gt;&gt;x;
+		for (i=0;i&lt;n;i++) {
+			for (j=0;j&lt;m;j++)
+				if (a[i][j]==x) {
+					cout&lt;&lt;&quot;VI TRI DAU TIEN XUAT HIEN PHAN TU &quot;&lt;&lt;x&lt;&lt;&quot; LA HANG &quot;&lt;&lt;i+1&lt;&lt;&quot; COT &quot;&lt;&lt;j+1;
+					exit (1);
+
+             }
+			}
+
+
+}
+</code></pre><p>bai 23</p>
+<pre><code>Bai23 (1).txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+1 KB
+Bộ nhớ đã sử dụng
+1 KB
+Vị trí
+Buoi_3
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+4 thg 11, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:04 do tôi thực hiện
+Người tạo
+22 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+	float a[100][100],t,s=1,x;
+	int i,n,m,j,k,h,c;
+	cout&lt;&lt;&quot;NHAP SO HANG CUA MANG:&quot;;cin&gt;&gt;n;
+	cout&lt;&lt;&quot;NHAP SO COT CUA MANG:&quot;;cin&gt;&gt;m;
+	cout&lt;&lt;&quot;NHAP MANG:&quot;&lt;&lt;endl;
+	for (i=0;i&lt;n;i++) {
+		for (j=0;j&lt;m;j++) {
+			cout&lt;&lt;&quot;a[&quot;&lt;&lt;i&lt;&lt;&quot;]=&quot;;cin&gt;&gt;a[i][j];
+		}
+	}
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;&quot;MANG VUA NHAP LA: &quot;;
+	for (i=0;i&lt;n;i++) {
+		cout&lt;&lt;endl;
+		for (j=0;j&lt;m;j++){
+
+			cout&lt;&lt;setw(5)&lt;&lt;a[i][j];
+		}
+	}
+	cout&lt;&lt;endl;
+	cout&lt;&lt;&quot;NHAP k: &quot;;cin&gt;&gt;k;
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;&quot;CAC PHAN TU  TAI HANG THU &quot;&lt;&lt;k&lt;&lt;&quot; LA:&quot;;
+		for (i=0;i&lt;n;i++) {
+			for (j=0;j&lt;m;j++){
+				if (i==k){
+					cout&lt;&lt;setw(5)&lt;&lt;a[i][j];
+					s = s * a[i][j];
+				}
+			}
+	}
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	cout&lt;&lt;s;
+
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	int temp = 0, sumRow, row;
+		for (i=0;i&lt;n;i++) {
+			for (j=0;j&lt;m;j++){
+				sumRow+= a[i][j];
+			}
+			if(temp &lt; sumRow){
+                temp = sumRow;
+                row = i;
+			}
+	}
+	cout&lt;&lt;row;
+
+	cout&lt;&lt;endl&lt;&lt;&quot;************&quot;&lt;&lt;endl;
+	int countt =0;
+		for (i=0;i&lt;n;i++) {
+			for (j=0;j&lt;m;j++){
+				if(a[i][j] &lt; 0){
+                    countt++;
+				}
+			}
+	}
+	cout&lt;&lt;countt;
+
+
+}
+</code></pre><h3 id="buoi-4">BUOI 4</h3>
+<p>bai 25</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int main()
+{
+    char x,y;
+    char hoten[30];
+    cout&lt;&lt;&quot;Ho ten:&quot;&lt;&lt;endl;
+    gets(hoten);
+    fflush(stdin);
+    cout&lt;&lt;&quot;\n========================&quot;&lt;&lt;endl;
+    cout&lt;&lt;&quot;\nHo ten da nhap: &quot;&lt;&lt;hoten;
+    cout&lt;&lt;&quot;\nNhap ki tu X: &quot;;
+    cin&gt;&gt;x;
+    for(int i=0;i&lt;strlen(hoten);i++)
+      if(hoten[i] == x)
+         cout&lt;&lt;&quot;\nKy tu: &quot;&lt;&lt;x&lt;&lt;&quot; xuat hien vi tri: &quot;&lt;&lt;i;
+   {
+           cout&lt;&lt;&quot;\nNhap ki tu Y:&quot;; cin&gt;&gt;y;
+
+        for(int i=0;i&lt;strlen(hoten);i++)
+      if(hoten[i] == x)
+         hoten[i]=y;
+       cout&lt;&lt;&quot;\nChuoi sau khi thay the:&quot;&lt;&lt;hoten;
+    }
+}
+
+
+</code></pre><p>bai 26</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int main()
+{
+    char chuoi[50];
+    char tach[50];
+    cout&lt;&lt;&quot;Nhap vao chuoi ki tu: &quot;;
+    gets(chuoi);
+    cout&lt;&lt;&quot;Nhap tu can tach: &quot;;
+    cin&gt;&gt;tach;
+{
+    cout&lt;&lt;&quot;Chuoi vua tach: &quot;&lt;&lt;strstr(chuoi,tach);
+}
+}
+
+</code></pre><p>bai 31</p>
+<pre><code>/*Bài 31 (TH-CSLT-03): Viết chương trình nhập 2 mảng một chiều A, B có n
+phần tử nguyên từ bản phím, tính mảng tổng C = A + B, in 3 mảng A, B, C ra màn
+hình.
+Trong đó: C[i] = A[i] + B[i] với i là phần tử bất kỳ tại vị trí mảng
+*/
+
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+void nhapmang(int a[],int n)
+ {
+	for(int i=0;i&lt;n;i++)
+        {
+		cout&lt;&lt;&quot;a[&quot;&lt;&lt;i&lt;&lt;&quot;]=&quot;;
+		cin&gt;&gt;a[i];
+	}
+}
+void tongmang(int a[],int b[],int c[],int n)
+{
+	for(int i=0;i&lt;n;i++)
+        {
+		c[i]=a[i]+b[i];
+	  }
+}
+void xuatmang(int a[],int n)
+ {
+	cout&lt;&lt;&quot;STT&quot;&lt;&lt;setw(6)&lt;&lt;&quot;Gia tri la&quot;&lt;&lt;endl;
+	for(int i=0;i&lt;n;i++)
+        {
+		cout&lt;&lt;setw(2)&lt;&lt;i&lt;&lt;setw(13)&lt;&lt;a[i]&lt;&lt;endl;
+	    }
+}
+int main ()
+{
+	int n;
+	cout&lt;&lt;&quot;Nhap vao so phan tu cua mang: &quot;;
+	cin&gt;&gt;n;
+	int a[n],b[n],c[n];
+	cout&lt;&lt;&quot;Mang 1:&quot;&lt;&lt;endl;
+	nhapmang(a,n);
+	cout&lt;&lt;&quot;Mang 2:&quot;&lt;&lt;endl;
+	nhapmang(b,n);
+	tongmang(a,b,c,n);
+	cout&lt;&lt;&quot;Mang 1:&quot;&lt;&lt;endl;
+	xuatmang(a,n);
+	cout&lt;&lt;&quot;Mang 2:&quot;&lt;&lt;endl;
+	xuatmang(b,n);
+	cout&lt;&lt;&quot;Mang 3:&quot;&lt;&lt;endl;
+	xuatmang(c,n);
+}
+
+</code></pre><h3 id="buoi-5">BUOI 5</h3>
+<p>bai 37</p>
+<pre><code>Bai37.txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+3 KB
+Bộ nhớ đã sử dụng
+3 KB
+Vị trí
+Buoi_5
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+26 thg 10, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:06 do tôi thực hiện
+Người tạo
+25 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct thuebaodt
+{
+    int stb;
+    char ten[50];
+    char ngaylap[50];
+    int cp;
+};
+void nhap(thuebaodt a[],int &amp;dem)
+{
+int i=0;
+ dem =0;
+ cout&lt;&lt;&quot;Nhap danh sach thue bao va so thue bao =0 de ket thuc lenh nhap! &quot;&lt;&lt;endl;
+ while(1)
+ {
+     cout&lt;&lt;&quot;Nhap thue bao thu&quot;&lt;&lt;i+1&lt;&lt;endl;
+     cout&lt;&lt;&quot;Nhap so thue bao:&quot;;cin&gt;&gt;a[i].stb;
+     if(a[i].stb!=0)
+     {
+         fflush(stdin);
+         cout&lt;&lt;&quot;Nhap ho ten khach hang: &quot;;gets(a[i].ten);
+         fflush(stdin);
+         cout&lt;&lt;&quot;Nhap cuoc phi: &quot;;cin&gt;&gt;a[i].cp;
+         fflush(stdin);
+         cout&lt;&lt;&quot;Nhap ngay lap: &quot;;gets(a[i].ngaylap);
+         i++;
+         dem++;
+     }
+     else
+     {
+         cout&lt;&lt;&quot;Ket thuc lẹnh nhap! &quot;&lt;&lt;endl;
+         break;
+     }
+ }
+}
+void xuat(thuebaodt a[], int dem)
+{
+    cout&lt;&lt;setw(6)&lt;&lt;left&lt;&lt;&quot;STT&quot;;
+    cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;&quot;So thue bao&quot;;
+    cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;&quot;Ho ten&quot;;
+    cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;&quot;Cuoc phi&quot;;
+    cout&lt;&lt;setw(12)&lt;&lt;left&lt;&lt;&quot;Ngay lap&quot;&lt;&lt;endl;
+    for(int i=0;i&lt;dem;i++)
+    {
+      cout&lt;&lt;setw(6)&lt;&lt;i+1;
+      cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;a[i].stb;
+      cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;a[i].ten;
+      cout&lt;&lt;setw(16)&lt;&lt;left&lt;&lt;a[i].cp;
+      cout&lt;&lt;setw(12)&lt;&lt;left&lt;&lt;a[i].ngaylap&lt;&lt;endl;
+    }
+}
+void sapxep(thuebaodt a[], int dem)
+{
+    for(int i=0;i&lt;1000;i++)
+    {
+        for(int j=i+1;j&lt;1000;j++)
+        {
+            if(a[i].cp&lt;a[j].cp)
+            {
+                thuebaodt tg=a[i];
+                a[i]=a[j];
+                a[j]=tg;
+            }
+            if(a[j].stb==0)
+            {
+                break;
+            }
+        }
+    }
+    cout&lt;&lt;&quot;Danh sach sau khi giam dan cua cuoc phi la: &quot;;
+    xuat(a,dem);
+}
+void timkiem(thuebaodt a[], int dem)
+{
+    int max=0;
+    for(int i=0;i&lt;dem;i++)
+    {
+        if(a[i].cp&gt;max)
+        {
+            max=a[i].cp;
+        }
+    }
+    for(int i=0;i&lt;dem;i++)
+    {
+        if(a[i].cp==max)
+        {
+            cout&lt;&lt;&quot;Khanh hang co cuoc phi cao nhat la&quot;&lt;&lt;endl;
+            cout&lt;&lt;&quot;So thue bao:&quot;&lt;&lt;a[i].stb;
+            cout&lt;&lt;&quot;\nHo ten:&quot;&lt;&lt;a[i].ten;
+            cout&lt;&lt;&quot;\nCuoc phi:&quot;&lt;&lt;a[i].cp;
+            cout&lt;&lt;&quot;\nNgay lap:&quot;&lt;&lt;a[i].ngaylap;
+        }
+    }
+}
+void them(thuebaodt a[], int dem)
+{
+    int i=dem+1;
+    cout&lt;&lt;&quot;Them mot so thue bao moi: &quot;&lt;&lt;endl;
+    cout&lt;&lt;&quot;Nhap so thue bao:&quot;;cin&gt;&gt;a[i].stb;
+      fflush(stdin);
+         cout&lt;&lt;&quot;Nhap ho ten khach hang: &quot;;gets(a[i].ten);
+         fflush(stdin);
+          cout&lt;&lt;&quot;Nhap cuoc phi: &quot;;cin&gt;&gt;a[i].cp;
+         fflush(stdin);
+         cout&lt;&lt;&quot;Nhap ngay lap: &quot;;gets(a[i].ngaylap);
+}
+void xoa(thuebaodt a[i], int &amp;dem)
+{
+    for(int i=0;i&lt;dem;i++)
+    {
+        if(a[i].cp&lt;1000)
+        {
+            a[i]=a[i-1];
+            dem--;
+        }
+    }
+    cout&lt;&lt;&quot;Danh sach sau khi xoa cuoc phi duoi 10.000 la: &quot;&lt;&lt;endl;
+    xuat(a,dem);
+}
+int main()
+{
+    thuebaodt a[1000];
+    int dem;
+    nhap(a,dem);
+    xuat(a,dem);
+    sapxep(a,dem);
+    timkiem(a,dem);
+    xoa(a,dem);
+}
+</code></pre><h3 id="buoi-6">BUOI 6</h3>
+<p>bai 39</p>
+<pre><code>Bai39.txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+3 KB
+Bộ nhớ đã sử dụng
+3 KB
+Vị trí
+Buoi_6
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+26 thg 10, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:07 do tôi thực hiện
+Người tạo
+25 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+void nhapMang(int a[], int &amp;n);
+void inmang(int a[],int n);
+void sapxepgiamdan(int a[],int n);
+void luuFilea(FILE *fp,int n,int a[]);
+void luuFileb(FILE *fp,int m,int b[]);
+void luuFilec(FILE *fp,int k,int c[]);
+void docFilea(FILE *fp,int &amp;n,int a[]);
+void docFileb(FILE *fp,int &amp;m,int b[]);
+void tronmang(int a[], int b[], int c[],int n,int m);
+int main()
+{
+	int n,m,k;
+	int a[50],b[50],c[100];
+	FILE *fp;
+	cout&lt;&lt;&quot;Nhap so phan tu cua mang A la :&quot;;cin&gt;&gt;n;
+	nhapMang(a,n);
+	sapxepgiamdan(a,n);
+	luuFilea(fp,n,a);
+	cout&lt;&lt;&quot;Nhap so phan tu cua mang B la : &quot;; cin&gt;&gt;m;
+	nhapMang(b,m);
+	sapxepgiamdan(b,m);
+	luuFileb(fp,m,b);
+	docFilea(fp,n,a);
+	docFileb(fp,m,b);
+	tronmang(a,b,c,n,m);
+	k=n+m;
+	inmang(c,k);
+	luuFilec(fp,k,c);
+	return 0;
+}
+void sapxepgiamdan(int a[],int n)
+{
+	int tg;
+	for (int i=0;i&lt;n-1;i++)
+	  for (int j=i+1;j&lt;n;j++)
+	     if (a[i]&lt;a[j])
+	        {
+	        	tg=a[i];
+	        	a[i]=a[j];
+	        	a[j]=tg;
+			}
+}
+void nhapMang(int a[], int &amp;n)
+{
+	for (int i=0;i&lt;n;i++)
+	  {
+	  	cout&lt;&lt;&quot;a[&quot;&lt;&lt;i&lt;&lt;&quot;] : &quot;; cin&gt;&gt;a[i];
+	  }
+
+}
+void inmang(int a[],int n)
+{
+	for (int i=0;i&lt;n;i++)
+	  {
+	  	cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;
+	  }
+}
+void docFilea(FILE *fp,int &amp;n,int a[])
+{
+	int x;
+	fp=fopen(&quot;A.dat&quot;,&quot;rb&quot;);
+	if (fp==NULL)
+	  {
+	  	cout&lt;&lt;&quot;\n Doc file bi loi \n&quot;;
+	  	exit(1);
+	  }
+	n=0;
+	while (fread(&amp;x,sizeof(int),1,fp)==1)
+	  {
+	  	a[n]=x;
+	  	n++;
+	  }
+	fclose(fp);
+//	for (int i=0;i&lt;n;i++)
+	//   {
+	//   	cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;
+	 //  }
+}
+void docFileb(FILE *fp,int &amp;m,int b[])
+{
+	int x;
+	fp=fopen(&quot;B.dat&quot;,&quot;rb&quot;);
+	if (fp==NULL)
+	  {
+	  	cout&lt;&lt;&quot;\n Doc file bi loi \n&quot;;
+	  	exit(1);
+	  }
+	m=0;
+	while (fread(&amp;x,sizeof(int),1,fp)==1)
+	  {
+	  	b[m]=x;
+	  	m++;
+	  }
+	fclose(fp);
+//	for (int i=0;i&lt;m;i++)
+	 //  {
+	 //  	cout&lt;&lt;b[i]&lt;&lt;&quot; &quot;;
+	 //  }
+}
+void tronmang(int a[], int b[], int c[],int n,int m)
+{
+   int i=0,j=0,k=0;
+   while (i&lt;n || j&lt;m)
+   {
+   	  if (i&lt;n &amp;&amp; j&lt;m)
+   	     {
+   	     	if (a[i]&gt;b[j])
+   	     	   {
+   	     	   	c[k]=a[i];
+   	     	   	k++;
+   	     	   	i++;
+			   }
+			else
+			{
+				c[k]=b[j];
+				k++;
+				j++;
+			}
+		 }
+	  else if (i&lt;n &amp;&amp; j&gt;= m)
+	          {
+	          	c[k]=a[i];
+	          	k++;
+	          	i++;
+			  }
+	  else if (j&lt;m &amp;&amp; i&gt;=n)
+	          {
+	          	c[k]=b[j];
+	          	k++;
+	          	j++;
+			  }
+   }
+}
+void luuFilea(FILE *fp,int n,int a[])
+{
+	fp=fopen(&quot;A.dat&quot;,&quot;wb&quot;);
+	for (int i=0;i&lt;n;i++)
+	   fwrite(&amp;a[i],sizeof(int),1,fp);
+	fclose(fp);
+}
+void luuFileb(FILE *fp,int m,int b[])
+{
+	fp=fopen(&quot;b.dat&quot;,&quot;wb&quot;);
+	for (int i=0;i&lt;m;i++)
+	   fwrite(&amp;b[i],sizeof(int),1,fp);
+	fclose(fp);
+}
+void luuFilec(FILE *fp,int k,int c[])
+{
+	fp=fopen(&quot;C.dat&quot;,&quot;wb&quot;);
+	for (int i=0;i&lt;k;i++)
+	   fwrite(&amp;c[i],sizeof(int),1,fp);
+	fclose(fp);
+}
+</code></pre><p>bai 40</p>
+<pre><code>Bai40.txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+3 KB
+Bộ nhớ đã sử dụng
+3 KB
+Vị trí
+Buoi_6
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+26 thg 10, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:07 do tôi thực hiện
+Người tạo
+25 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include&lt;iostream&gt;
+#include&lt;string.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;iomanip&gt;
+#include&lt;stdlib.h&gt;
+using namespace std;
+struct TAIXE
+{
+    char mataixe[30];
+    char hoten[30];
+    char gioitinh[30];
+    int namsinh;
+    char biensoxe[30];
+    float luong;
+};
+void nhap(TAIXE ds[],int &amp;n)
+{
+    for(int i=0;i&lt;n;++i)
+    {
+        cout&lt;&lt;&quot;\n danh sach [&quot;&lt;&lt;i&lt;&lt;&quot;]&quot;;
+        cout&lt;&lt;&quot;\n Ma tai xe:&quot;;
+        fflush(stdin);
+        gets(ds[i].mataixe);
+        cout&lt;&lt;&quot;\n Ho va ten: &quot;;
+        gets(ds[i].hoten);
+        cout&lt;&lt;&quot;\n Gioi tinh: &quot;;
+        fflush(stdin);
+        gets(ds[i].gioitinh);
+        cout&lt;&lt;&quot;\n Nam sinh: &quot;;
+        cin&gt;&gt;ds[i].namsinh;
+        cout&lt;&lt;&quot;\n Bien so xe: &quot;;
+        fflush(stdin);
+        gets(ds[i].biensoxe);
+        cout&lt;&lt;&quot;\n Luong: &quot;;
+        cin&gt;&gt;ds[i].luong;
+    }
+}
+void ghifile(FILE *f,TAIXE ds[],int &amp;n)
+{
+    f=fopen(&quot;Taixe.txt&quot;,&quot;wb&quot;);
+    for(int i=0;i&lt;n;i++)
+        fwrite(&amp;ds[i],sizeof(TAIXE),1,f);
+    fclose(f);
+}
+void docfile(FILE *f,TAIXE ds[],int &amp;n)
+{
+    f=fopen(&quot;Taixe.txt&quot;,&quot;rb&quot;);
+    if(f==NULL)
+    {
+        cout&lt;&lt;&quot;\n doc file bi loi&quot;;
+        exit(1);
+    }
+    TAIXE tg;
+    n=0;
+    while(fread(&amp;tg,sizeof(TAIXE),1,f)==1)
+    {
+        ds[n]=tg;
+        n++;
+    }
+    fclose(f);
+}
+void inds(TAIXE ds[],int &amp;n)
+{
+    cout&lt;&lt;&quot;\n Danh sach tai xe: &quot;;
+    for(int i=0;i&lt;n;i++)
+    {
+       cout&lt;&lt;&quot;\n  &quot;&lt;&lt;i;
+       cout&lt;&lt;setw(8)&lt;&lt;ds[i].mataixe;
+       cout&lt;&lt;setw(10)&lt;&lt;ds[i].hoten;
+       cout&lt;&lt;setw(7)&lt;&lt;ds[i].gioitinh;
+       cout&lt;&lt;setw(10)&lt;&lt;ds[i].namsinh;
+       cout&lt;&lt;setw(10)&lt;&lt;ds[i].biensoxe;
+       cout&lt;&lt;setw(12)&lt;&lt;ds[i].luong;
+    }
+}
+void chinhsua(FILE *f,TAIXE ds[],int &amp;n)
+{
+    docfile(f,ds,n);
+    char matx[30];
+    cout&lt;&lt;&quot;\n nhap ma tai xe can sua: &quot;;
+    cin&gt;&gt;matx;
+    for(int i=0;i&lt;n;i++)
+    {
+        if(strcmp(ds[i].mataixe,matx)==0)
+        {
+            cout&lt;&lt;&quot;\n sua lai luong: &quot;;
+            fflush(stdin);
+            cin&gt;&gt;ds[i].luong;
+        }
+    }
+    ghifile(f,ds,n);
+    docfile(f,ds,n);
+    inds(ds,n);
+}
+void sapxep(FILE *f,TAIXE ds[],int &amp;n)
+{
+    TAIXE tg;
+    for(int i=0;i&lt;n-1;i++)
+        for(int j=i+1;j&lt;n;j++)
+            if(strcmp(ds[i].hoten,ds[j].hoten)&gt;0)
+            {
+                tg=ds[i];
+                ds[i]=ds[j];
+                ds[j]=tg;
+            }
+    ghifile(f,ds,n);
+    inds(ds,n);
+}
+void taixe_nu(FILE *f,TAIXE ds[],int &amp;n)
+{
+    f=fopen(&quot;Taixenu.txt&quot;,&quot;wb&quot;);
+    for(int i=0;i&lt;n;i++)
+        if(strcmp(ds[i].gioitinh,&quot;nu&quot;)==0)
+            fwrite(&amp;ds[i],sizeof(TAIXE),1,f);
+    fclose(f);
+}
+void indsnu(FILE *f,TAIXE ds[],int &amp;n)
+{
+    TAIXE tg;
+    n=0;
+    f=fopen(&quot;Taixenu.txt&quot;,&quot;rb&quot;);
+    while(fread(&amp;tg,sizeof(TAIXE),1,f)==1)
+    {
+        ds[n]=tg;
+        n++;
+    }
+    fclose(f);
+    inds(ds,n);
+}
+int main()
+{
+    FILE *f;
+    TAIXE ds[100];
+    int n;
+    cout&lt;&lt;&quot;\n nhap so luong tai xe: &quot;;
+    cin&gt;&gt;n;
+    nhap(ds,n);
+    inds(ds,n);
+    ghifile(f,ds,n);
+    docfile(f,ds,n);
+    chinhsua(f,ds,n);
+    cout&lt;&lt;&quot;\n danh sach sau khi sap xep: &quot;;
+    sapxep(f,ds,n);
+    cout&lt;&lt;&quot;\n in danh sach tai xe nu: &quot;;
+    taixe_nu(f,ds,n);
+    indsnu(f,ds,n);
+}
+</code></pre><p>bai 41</p>
+<pre><code>Bai41.txt
+Người có quyền truy cập
+
+Thuộc tính hệ thống
+Loại
+Văn bản
+Kích thước
+2 KB
+Bộ nhớ đã sử dụng
+2 KB
+Vị trí
+Buoi_6
+Chủ sở hữu
+Minh Nguyễn Công
+Lần sửa đổi gần đây nhất
+26 thg 10, 2021 do Minh Nguyễn Công thực hiện
+Đã mở
+23:07 do tôi thực hiện
+Người tạo
+25 thg 11, 2021
+Thêm mô tả
+Người xem có thể tải xuống
+#include&lt;bits/stdc++.h&gt;
+  using namespace std;
+  void Luu(int a[], int &amp;n)
+  {
+  	fstream file;
+  	file.open(&quot;DATA.INF&quot;,ios::out);
+  	cout&lt;&lt;&quot; nhap so luong phan tu n: &quot;;cin&gt;&gt;n;
+  	for(int i=0;i&lt;n;i++)
+  	{
+  		cout&lt;&lt;&quot;nhap a[&quot;&lt;&lt;i&lt;&lt;&quot;]=&quot;;cin&gt;&gt;a[i];
+	  }
+	  file.close();
+}
+void tbc (int a[],int n )
+{
+	int s=0, dem=0;
+	float tbc=0;
+	fstream fdoc;
+	fdoc.open(&quot;DATA.INF&quot;,ios::in);
+	for (int i=0; i&lt;n;i++)
+	{
+		fdoc&gt;&gt;a[i];
+	}
+	for(int i=0;i&lt;n;i++)
+	{
+		if (a[i]&lt;0)
+		{
+			s+=a[i];
+			dem++;
+		}
+	}
+	tbc= (float)s/dem;
+	cout&lt;&lt;&quot;TBC cac phan tu am trong tep la:&quot;&lt;&lt;tbc&lt;&lt;endl;
+}
+void chen(int a[], int &amp;n)
+{
+	int x,k;
+	fstream fdoc;
+	fdoc.open(&quot;DATA.INF&quot;,ios::in);
+	for(int i=0;i&lt;n;i++)
+	{
+		fdoc&gt;&gt;a[i];
+
+	}
+	fdoc.close();
+	cout&lt;&lt;&quot;nhap so can chen x:&quot;;cin&gt;&gt;x;
+	do
+	{
+		cout&lt;&lt;&quot;Nhap vi tri can thay k: &quot;;cin&gt;&gt;k;
+		if(k&lt;0&amp;&amp; k&gt;n)
+		{
+			cout&lt;&lt;&quot; da nhap sai , moi nhap lai&quot;&lt;&lt;endl;
+
+		}
+
+	}
+	while(k&gt;n);
+	for(int i=n;i&gt;=k; i--)
+	{
+		a[i]=a[i-1];
+	}
+	a[k]=x;
+	n++;
+	fstream file;
+	file.open(&quot;DATA.INF&quot;,ios::out);
+	for(int i=0 ; i&lt;n;i++)
+	{
+		file&lt;&lt;a[i]&lt;&lt;&quot;\n&quot;;
+	}
+	file.close ();
+
+}
+void vtrigtln(int a[],int n)
+{
+	int v;
+	int b=0;
+	fstream fdoc;
+	fdoc.open(&quot;DATA.INF&quot;,ios::in);
+	for(int i=0;i&lt;n;i++)
+	{
+		fdoc&gt;&gt;a[i];
+	}
+	for(int i=0;i&lt;n;i++)
+	{
+		if(a[i]&gt;b)
+		{
+			b=a[i];
+			v=i;
+		}
+
+	}
+	cout&lt;&lt;&quot;phan tu lon nhat o trong tep co vi tri la: &quot;&lt;&lt;v;
+	fdoc.close();
+
+}
+void doc(int a[],int n)
+{
+	fstream fdoc;
+	fdoc.open(&quot;DATA.INF&quot;,ios::in);
+	for(int i=0;i&lt;n;i++)
+	{
+		fdoc&gt;&gt;a[i];
+	}
+	cout&lt;&lt;&quot;\nMang trong tep la&quot;&lt;&lt;endl;
+	for(int i=0;i&lt;n;i++)
+	{
+		cout&lt;&lt;a[i]&lt;&lt;&quot;\t&quot;;
+
+	}
+	fdoc.close();
+}
+int main()
+{
+	int a[200];
+	int n;
+	Luu(a,n);
+	tbc(a,n);
+	chen(a,n);
+	vtrigtln(a,n);
+	doc(a,n);
+}
+</code></pre>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/trr_btl/" data-toggle="tooltip" data-placement="top" title="Tổng Hợp BTL Toán Rời Rạc">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/" data-toggle="tooltip" data-placement="top" title="Quản Lý Sinh Viên">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+<div id="disqus-comment"></div>
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/csdl" title="csdl">
+                            csdl
+                        </a>
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/cslt" title="cslt">
+                            cslt
+                        </a>
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/ctdl" title="ctdl">
+                            ctdl
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/trr" title="trr">
+                            trr
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="FITHOU-UnderWorld" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+                    <li>
+                        <a href="mailto:MHNBT@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/MHN.BT.Dev">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/FITHOU-UnderWorld">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; FITHOU-UnderWorld 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/FITHOU-UnderWorld\/FITHOU-UnderWorld.github.io\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
+</html>

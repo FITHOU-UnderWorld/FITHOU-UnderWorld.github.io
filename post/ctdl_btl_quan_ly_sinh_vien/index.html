@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="FITHOU-UnderWorld">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg">
+    <meta property="twitter:image" content="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg" />
+    
+
+    
+    <meta name="title" content="Quản Lý Sinh Viên" />
+    <meta property="og:title" content="Quản Lý Sinh Viên" />
+    <meta property="twitter:title" content="Quản Lý Sinh Viên" />
+    
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/favicon.ico">
+
+    <title>Quản Lý Sinh Viên-MHN-BT | MHN-BT</title>
+
+    <link rel="canonical" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/">
+
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/jquery.min.js"></script>
+
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/bootstrap.min.js"></script>
+
+    
+    <script src="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/">FITHOU-UnderWorld</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/csdl">csdl</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/cslt">cslt</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ctdl">ctdl</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/lhdt">lhdt</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ltdd">ltdd</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/ltweb">ltweb</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/mang">mang</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/trr">trr</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/img/post-bg-unix-linux.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/ctdl" title="ctdl">
+                            ctdl
+                        </a>
+                        
+                        <a class="tag" href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/quanlysinhvien" title="quanlysinhvien">
+                            quanlysinhvien
+                        </a>
+                        
+                    </div>
+                    <h1>Quản Lý Sinh Viên</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     mhn-bt
+                             
+                            on 
+                            Saturday, December 11, 2021
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <pre><code>#include&lt;iostream&gt;
+using namespace std;
+#include&lt;string&gt;
+#include&lt;fstream&gt;
+// khai báo cấu trúc ngày tháng năm sinh
+struct date
+{
+	int ngay;
+	int thang;
+	int nam;
+};
+typedef struct date DATE;
+// hàm đọc dữ liệu ngày tháng năm từ file
+void Doc_Ngay_Thang_Nam(ifstream &amp;filein, DATE &amp;date)
+{
+	filein &gt;&gt; date.ngay;
+	filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự '/'
+	filein &gt;&gt; date.thang;
+	filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự '/'
+	filein &gt;&gt; date.nam;
+}
+// khai báo cấu trúc sinh viên
+struct sinhvien
+{
+	string hoten;
+	string masv;
+	DATE ngaysinh;
+	float dtb;
+};
+typedef struct sinhvien SINHVIEN;
+// khai báo cấu trúc 1 cái node sinh viên
+struct node
+{
+	SINHVIEN data; // dữ liệu của node
+	struct node *pNext; // con trỏ dùng để liên kết giữa các cái node với nhau
+};
+typedef struct node NODE;
+// ========== KHAI BÁO CẤU TRÚC DANH SÁCH LIÊN KẾT ĐƠN CÁC SINH VIÊN =========
+struct list
+{
+	NODE *pHead;
+	NODE *pTail;
+};
+typedef struct list LIST;
+// hàm khởi tạo danh sách liên kết đơn các sinh viên
+void KhoiTaoDanhSach(LIST &amp;l)
+{
+	l.pHead = NULL;
+	l.pTail = NULL;
+}
+// hàm khởi tạo 1 cái node để chuẩn bị thêm vào danh sách
+NODE *KhoiTaoNode(SINHVIEN x)
+{
+	NODE *p = new NODE;
+	if (p == NULL)
+	{
+		cout &lt;&lt; &quot;\nCap phat that bai !&quot;;
+		return NULL;
+	}
+	p-&gt;data = x; // đưa dữ liệu của biến sinh vien x vào data của cái Node p
+	p-&gt;pNext = NULL; // khởi tạo node p nhưng node p chưa có liên kết đến node nào hết
+	return p;
+}
+// hàm thêm 1 cái node sinh viên vào đầu danh sách
+void ThemDau(LIST &amp;l, NODE *p)
+{
+	// nếu danh sách rỗng
+	if (l.pHead == NULL)
+	{
+		l.pHead = l.pTail = p; // node p thêm vào cũng chính là node đầu và node cuối
+	}
+	else
+	{
+		p-&gt;pNext = l.pHead; // cho con trỏ p trỏ đến pHead
+		l.pHead = p; // cập nhật lại pHead là node p
+	}
+}
+// hàm thêm 1 cái node sinh viên vào cuối danh sách
+void ThemCuoi(LIST &amp;l, NODE *p)
+{
+	// nếu danh sách rỗng
+	if (l.pHead == NULL)
+	{
+		l.pHead = l.pTail = p; // node p thêm vào cũng chính là node đầu và node cuối
+	}
+	else
+	{
+		l.pTail-&gt;pNext = p; // cho con trỏ của pTail trỏ đến node p
+		l.pTail = p; // cập nhật lại pTail chính là node p
+	}
+}
+// hàm đọc dữ liệu 1 sinh viên từ file
+void Doc_Thong_Tin_1_Sinh_Vien(ifstream &amp;filein, SINHVIEN &amp;sv)
+{
+	// đọc họ tên sinh viên
+	getline(filein, sv.hoten, ','); // đọc đến dấu ',' thì dừng
+	filein.seekg(1, 1); // tại vị trí hiện tại dịch sang phải 1 byte để bỏ khoảng trắng ' '
+	// đọc mã sinh viên
+	getline(filein, sv.masv, ','); // đọc đến dấu ',' thì dừng
+	filein.seekg(1, 1); // tại vị trí hiện tại dịch sang phải 1 byte để bỏ khoảng trắng ' '
+	// đọc thông tin ngày tháng năm sinh
+	Doc_Ngay_Thang_Nam(filein, sv.ngaysinh);
+	filein.seekg(2, 1); // tại vị trí hiện tại dịch sang phải 2 byte để bỏ dấu phẩy và khoảng trắng ' '
+	// đọc điểm trung bình
+	filein &gt;&gt; sv.dtb;
+	// tạo biến tạm để đọc cái kí tự xuống dòng ở cuối dòng
+	string temp;
+	getline(filein, temp);
+}
+
+// hàm đọc danh sách sinh viên từ file
+void Doc_Danh_Sach_Sinh_Vien(ifstream &amp;filein, LIST &amp;l)
+{
+	// đọc đến cuối file thì dừng
+	while (!filein.eof())
+	{
+		// BƯỚC 1: ĐỌC THÔNG TIN SINH VIÊN
+		SINHVIEN sv;
+		Doc_Thong_Tin_1_Sinh_Vien(filein, sv);
+		// BƯỚC 2: KHỞI TẠO 1 CÁI NODE SINH VIÊN
+		NODE *p = KhoiTaoNode(sv);
+		// BƯỚC 3: THÊM SINH VIÊN(thêm node p) VÀO DANH SÁCH LIÊN KẾT ĐƠN CÁC SINH VIÊN
+		ThemCuoi(l, p);
+	}
+}
+// hàm giải phóng vùng nhớ cho danh sách liên kết đơn
+void Giai_Phong_Vung_Nho(LIST &amp;l)
+{
+	NODE *p = NULL;
+	while (l.pHead != NULL)
+	{
+		p = l.pHead;
+		l.pHead= l.pHead-&gt;pNext;
+		delete p;
+	}
+}
+// hàm ghi thông tin 1 sinh viên vào file
+void Ghi_Thong_Tin_1_Sinh_Vien(ofstream &amp;fileout, SINHVIEN sv)
+{
+	fileout &lt;&lt; sv.hoten &lt;&lt; &quot;, &quot;;
+	fileout &lt;&lt; sv.masv &lt;&lt; &quot;, &quot;;
+	fileout &lt;&lt; sv.ngaysinh.ngay &lt;&lt; &quot;/&quot; &lt;&lt; sv.ngaysinh.thang &lt;&lt; &quot;/&quot; &lt;&lt; sv.ngaysinh.nam  &lt;&lt; &quot;, &quot;;
+	fileout &lt;&lt; sv.dtb;
+}
+
+// hàm hoán vị 2 cái data của 2 cái node cho nhau
+void Hoan_Vi(SINHVIEN &amp;x, SINHVIEN &amp;y)
+{
+	SINHVIEN tam = x;
+	x = y;
+	y = tam;
+}
+// hàm sắp xếp tăng dần theo điểm trung bình
+void Sap_Xep_Tang_Dan(LIST &amp;l)
+{
+	for (NODE *k = l.pHead; k != NULL; k = k-&gt;pNext)
+	{
+		for (NODE *h = k-&gt;pNext; h != NULL; h = h-&gt;pNext)
+		{
+			if (k-&gt;data.dtb &gt; h-&gt;data.dtb)
+			{
+				Hoan_Vi(k-&gt;data, h-&gt;data); // hoán vị 2 cái data của 2 cái node
+			}
+		}
+	}
+}
+// Sắp xếp danh sách sinh viên tăng dần theo điểm trung bình - sau đó lưu vào file SAPXEPDIEMMAX.TXT
+void Luu_File_Sap_Xep_Tang_Dan_Diem_Trung_Binh(LIST l)
+{
+	ofstream fileout;
+	fileout.open(&quot;SAPXEPDIEMMAX.TXT&quot;, ios::out);
+	//BƯỚC 1: Gọi lại hàm sắp xếp để sắp xếp danh sách sinh viên tăng dần theo điểm trung bình
+	Sap_Xep_Tang_Dan(l);
+	// BƯỚC 2: Dùng vòng lặp để lưu tất cả thông tin sinh vien vào file
+	for (NODE *k = l.pHead; k != NULL; k = k-&gt;pNext)
+	{
+		Ghi_Thong_Tin_1_Sinh_Vien(fileout, k-&gt;data);
+		fileout &lt;&lt; endl;
+	}
+	fileout.close();
+}
+
+// hàm in danh sách sinh viên có điểm trung bình max vào file
+void Ghi_File_Sinh_Vien_Diem_Trung_Binh_Max(LIST l)
+{
+	float max = l.pHead-&gt;data.dtb; // giả sử sinh viên thứ nhất có điểm trung bình cao nhất
+	// BƯỚC 1: Tìm ra điểm trung bình cao nhất
+	for (NODE *k = l.pHead-&gt;pNext; k != NULL; k = k-&gt;pNext)
+	{
+		if (max &lt; k-&gt;data.dtb)
+		{
+			max = k-&gt;data.dtb;
+		}
+	}
+	ofstream fileout;
+	fileout.open(&quot;DIEMTRUNGBINHMAX.TXT&quot;, ios::out);
+	// BƯỚC 2: Tìm các sinh viên có điểm trung bình cao nhất và ghi vào file
+	for (NODE *k = l.pHead; k != NULL; k = k-&gt;pNext)
+	{
+		if (max == k-&gt;data.dtb)
+		{
+			Ghi_Thong_Tin_1_Sinh_Vien(fileout, k-&gt;data);
+			fileout &lt;&lt; endl;
+		}
+	}
+	fileout.close();
+}
+
+// hàm tách tên trong chuỗi họ tên
+string Ten_Sinh_Vien(string tensv)
+{
+	// BƯỚC 1: Duyệt họ tên sinh viên từ cuối chuỗi về đầu chuỗi - nếu gặp kí tự khoảng trắng thì dừng và lấy cái vị trí tiếp theo để cắt chuỗi
+	int length = tensv.length();
+	int i;
+	for (i = length - 1; i &gt;= 0; i--)
+	{
+		if (tensv[i] == ' ')
+		{
+			break;
+		}
+	}
+	// BƯỚC 2: cắt chuỗi tại vị trí i + 1 về đến cuối chuỗi
+	return tensv.substr(i + 1);
+}
+
+// hàm xuất để test dữ liệu
+void Xuat(SINHVIEN sv)
+{
+	cout &lt;&lt; &quot;\nHo ten:&quot; &lt;&lt; sv.hoten;
+	cout &lt;&lt; &quot;\nMa sinh vien:&quot; &lt;&lt; sv.masv;
+	cout &lt;&lt; &quot;\nNgay sinh:&quot; &lt;&lt; sv.ngaysinh.ngay &lt;&lt; &quot;/&quot; &lt;&lt; sv.ngaysinh.thang &lt;&lt; &quot;/&quot; &lt;&lt; sv.ngaysinh.nam;
+	cout &lt;&lt; &quot;\nDiem trung binh:&quot; &lt;&lt; sv.dtb;
+}
+// hàm xuất danh sách sinh viên
+void Xuat_Danh_Sach_Sinh_Vien(LIST l)
+{
+	int dem = 1;
+	for (NODE *k = l.pHead; k != NULL; k = k-&gt;pNext)
+	{
+		cout &lt;&lt; &quot;\n\n\t\t SINH VIEN THU &quot; &lt;&lt; dem++;
+		Xuat(k-&gt;data);
+	}
+}
+// hàm tìm kiếm sinh viên dựa vào tên sinh viên
+void Tim_Kiem_Sinh_Vien_Dua_Vao_Ten(LIST l, string tensv)
+{
+	for (NODE *k = l.pHead; k != NULL; k = k-&gt;pNext)
+	{
+		// BƯỚC 1: Cắt cái tên trong chuỗi họ tên của sinh viên
+		string ten = Ten_Sinh_Vien(k-&gt;data.hoten);
+		if (_stricmp((char *)ten.c_str(), (char *)tensv.c_str()) == 0)
+		{
+			Xuat(k-&gt;data);
+			cout &lt;&lt; endl &lt;&lt; endl;
+		}
+	}
+}
+
+
+int main()
+{
+	LIST l;
+	KhoiTaoDanhSach(l);
+	// mở file lên
+	ifstream filein;
+	filein.open(&quot;SINHVIEN.TXT&quot;, ios::in);
+	Doc_Danh_Sach_Sinh_Vien(filein, l);
+	Xuat_Danh_Sach_Sinh_Vien(l);
+
+	//Luu_File_Sap_Xep_Tang_Dan_Diem_Trung_Binh(l);
+	Ghi_File_Sinh_Vien_Diem_Trung_Binh_Max(l);
+
+
+
+
+	string tensv;
+	cout &lt;&lt; &quot;\nNhap ho ten sinh vien can tim kiem: &quot;;
+	getline(cin, tensv);
+	Tim_Kiem_Sinh_Vien_Dua_Vao_Ten(l, tensv);
+	Giai_Phong_Vung_Nho(l);
+	filein.close();
+
+
+
+
+
+
+	system(&quot;pause&quot;);
+	return 0;
+}
+
+</code></pre>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/" data-toggle="tooltip" data-placement="top" title="Thực Hành C&#43;&#43;">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/csdl_quan_li_kinh_doanh_quan_ao/" data-toggle="tooltip" data-placement="top" title="Quản lý kinh doanh quần áo">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+<div id="disqus-comment"></div>
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/csdl" title="csdl">
+                            csdl
+                        </a>
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/cslt" title="cslt">
+                            cslt
+                        </a>
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/ctdl" title="ctdl">
+                            ctdl
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/trr" title="trr">
+                            trr
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="FITHOU-UnderWorld" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+                    <li>
+                        <a href="mailto:MHNBT@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/MHN.BT.Dev">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/FITHOU-UnderWorld">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; FITHOU-UnderWorld 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/FITHOU-UnderWorld\/FITHOU-UnderWorld.github.io\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+</body>
+</html>

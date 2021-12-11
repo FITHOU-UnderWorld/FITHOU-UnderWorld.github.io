@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quanlysinhvien on FITHOU-UnderWorld</title>
+    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/quanlysinhvien/</link>
+    <description>Recent content in quanlysinhvien on FITHOU-UnderWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/quanlysinhvien/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quản Lý Sinh Viên</title>
+      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</guid>
+      <description>#include&amp;lt;iostream&amp;gt; using namespace std; #include&amp;lt;string&amp;gt; #include&amp;lt;fstream&amp;gt; // khai báo cấu trúc ngày tháng năm sinh struct date { int ngay; int thang; int nam; }; typedef struct date DATE; // hàm đọc dữ liệu ngày tháng năm từ file void Doc_Ngay_Thang_Nam(ifstream &amp;amp;filein, DATE &amp;amp;date) { filein &amp;gt;&amp;gt; date.ngay; filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự &#39;/&#39; filein &amp;gt;&amp;gt; date.thang; filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự &#39;/&#39; filein &amp;gt;&amp;gt; date.</description>
+    </item>
+    
+  </channel>
+</rss>

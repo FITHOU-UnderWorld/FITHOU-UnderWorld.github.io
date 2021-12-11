@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thuchanhc&#43;&#43; on FITHOU-UnderWorld</title>
+    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/thuchanhc&#43;&#43;/</link>
+    <description>Recent content in thuchanhc&#43;&#43; on FITHOU-UnderWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/thuchanhc++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thực Hành C&#43;&#43;</title>
+      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</guid>
+      <description>bài tập thực hành môn lập trình cơ sở  mọi người xem rồi code lại cho nhớ nhé.
+ BUOI 1 Bai 1
+#include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; int main() { float s, v; int t; cout&amp;lt;&amp;lt;&amp;quot;Nhap vao Quang duong: &amp;quot;; cin&amp;gt;&amp;gt;s; cout&amp;lt;&amp;lt;&amp;quot;Nhap vao Thoi gian: &amp;quot;; cin&amp;gt;&amp;gt;t; v = s/t; cout&amp;lt;&amp;lt;&amp;quot;Van toc la: &amp;quot;&amp;lt;&amp;lt;setprecision(2)&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;v; return 0; } Bai 2
+#include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; int main() { string MaHS; string HoTen; string NgaySinh; string Lop; int SoBuoiAnBanTru; int SoTienAnBanTru; cout&amp;lt;&amp;lt;&amp;quot;Nhap Ma Hoc Sinh: &amp;quot;; fflush(stdin); getline(std::cin,MaHS); cout&amp;lt;&amp;lt;&amp;quot;Nhap Ho Ten Hoc Sinh: &amp;quot;; fflush(stdin); getline(std::cin,HoTen); cout&amp;lt;&amp;lt;&amp;quot;Nhap Ngay Sinh: &amp;quot;; fflush(stdin); getline(std::cin,NgaySinh); cout&amp;lt;&amp;lt;&amp;quot;Nhap Lop: &amp;quot;; fflush(stdin); getline(std::cin,Lop); cout&amp;lt;&amp;lt;&amp;quot;Nhap So Buoi An Ban Tru: &amp;quot;; fflush(stdin); cin&amp;gt;&amp;gt;SoBuoiAnBanTru; // tinnh toan so tien an theo buoi SoTienAnBanTru = SoBuoiAnBanTru * 25000; cout&amp;lt;&amp;lt;&amp;quot;=============================&amp;quot;&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;Ma Hoc Sinh: &amp;quot;&amp;lt;&amp;lt;MaHS&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;Ho Ten Hoc Sinh: &amp;quot;&amp;lt;&amp;lt;HoTen&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;Ngay Sinh Hoc Sinh: &amp;quot;&amp;lt;&amp;lt;NgaySinh&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;Lop: &amp;quot;&amp;lt;&amp;lt;Lop&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;So Buoi An Ban Tru: &amp;quot;&amp;lt;&amp;lt;SoBuoiAnBanTru&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;&amp;quot;So Tien An Ban Tru: &amp;quot;&amp;lt;&amp;lt;SoTienAnBanTru&amp;lt;&amp;lt;endl; } bai 3</description>
+    </item>
+    
+  </channel>
+</rss>

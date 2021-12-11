@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dslkdon on FITHOU-UnderWorld</title>
+    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/dslkdon/</link>
+    <description>Recent content in dslkdon on FITHOU-UnderWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/dslkdon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Danh Sách Liên Kết Đơn </title>
+      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</guid>
+      <description>#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef struct DeTai { int soLuong; char tenDeTai[50], SinhVien[30], maDeTai[30]; } detai; typedef struct node { DeTai data; struct node *next; } qldt; // chuong trinh quan ly dt void initDeTai(qldt *&amp;amp;head, qldt *&amp;amp;tail) { head = NULL; tail = NULL; }; node *createNode() { qldt *new_node = (qldt *) malloc(sizeof(qldt)); cout&amp;lt;&amp;lt;&amp;quot;\nNhap ten De Tai: &amp;quot;; fflush(stdin); gets(*&amp;amp;new_node-&amp;gt;data.tenDeTai); cout&amp;lt;&amp;lt;&amp;quot;Nhap ma De Tai: &amp;quot;; fflush(stdin); cin&amp;gt;&amp;gt;*&amp;amp;new_node-&amp;gt;data.maDeTai; cout&amp;lt;&amp;lt;&amp;quot;Nhap ten SV lam De Tai: &amp;quot;; fflush(stdin); gets(*&amp;amp;new_node-&amp;gt;data.</description>
+    </item>
+    
+  </channel>
+</rss>
