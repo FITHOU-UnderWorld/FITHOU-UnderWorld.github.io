@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSLT on FITHOU-UnderWorld</title>
-    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/cslt/</link>
+    <link>https://FITHOU-UnderWorld.github.io/categories/cslt/</link>
     <description>Recent content in CSLT on FITHOU-UnderWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/categories/cslt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://FITHOU-UnderWorld.github.io/categories/cslt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Thực Hành C&#43;&#43;</title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/de_thuc_hanh_cslt/</guid>
       <description>bài tập thực hành môn lập trình cơ sở  mọi người xem rồi code lại cho nhớ nhé.
  BUOI 1 Bai 1
 #include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; int main() { float s, v; int t; cout&amp;lt;&amp;lt;&amp;quot;Nhap vao Quang duong: &amp;quot;; cin&amp;gt;&amp;gt;s; cout&amp;lt;&amp;lt;&amp;quot;Nhap vao Thoi gian: &amp;quot;; cin&amp;gt;&amp;gt;t; v = s/t; cout&amp;lt;&amp;lt;&amp;quot;Van toc la: &amp;quot;&amp;lt;&amp;lt;setprecision(2)&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;v; return 0; } Bai 2
@@ -25,10 +25,10 @@
     
     <item>
       <title>Đề Bài Tập Lớn CSLT</title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_btl_cslt/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/de_btl_cslt/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/de_btl_cslt/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/de_btl_cslt/</guid>
       <description>Tổng Hợp Đề CSLT  mọi người làm xong đề tài của mình thì có thể tham khảo thêm đề khác để luyện tập nhé.
  nhiều đề quá mình lười cop mọi người xem ở đây nhé ĐỀ BTL CƠ SỞ DỮ LIỆU</description>
     </item>

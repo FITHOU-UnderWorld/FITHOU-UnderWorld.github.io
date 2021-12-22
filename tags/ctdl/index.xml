@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ctdl on FITHOU-UnderWorld</title>
-    <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/ctdl/</link>
+    <link>https://FITHOU-UnderWorld.github.io/tags/ctdl/</link>
     <description>Recent content in ctdl on FITHOU-UnderWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/tags/ctdl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://FITHOU-UnderWorld.github.io/tags/ctdl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bài Tập Lớn Queue</title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_queue/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_queue/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_queue/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_queue/</guid>
       <description>wait update&amp;hellip;..</description>
     </item>
     
     <item>
       <title>Danh Sách Liên Kết Đôi </title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_lk2/</guid>
       <description>#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; struct NODE{ int data; NODE *next; }; int main(){ NODE *head = new NODE(); head-&amp;gt;data = 1; head-&amp;gt;next = NULL; NODE *second = new NODE(); second-&amp;gt;data = 2; head-&amp;gt;next = NULL; NODE *third = new NODE(); third-&amp;gt;data = 3; head-&amp;gt;next = NULL; //liên kết các node lại với nhau head-&amp;gt;next = second; second-&amp;gt;next = third; //truy cập phần tử int data = head-&amp;gt;data; cout&amp;lt;&amp;lt;data&amp;lt;&amp;lt;endl; //truy cập đến tất cả các phần tử trong NODE NODE *p = head; while(p!</description>
     </item>
     
     <item>
       <title>Danh Sách Liên Kết Đơn </title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_lk1/</guid>
       <description>#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef struct DeTai { int soLuong; char tenDeTai[50], SinhVien[30], maDeTai[30]; } detai; typedef struct node { DeTai data; struct node *next; } qldt; // chuong trinh quan ly dt void initDeTai(qldt *&amp;amp;head, qldt *&amp;amp;tail) { head = NULL; tail = NULL; }; node *createNode() { qldt *new_node = (qldt *) malloc(sizeof(qldt)); cout&amp;lt;&amp;lt;&amp;quot;\nNhap ten De Tai: &amp;quot;; fflush(stdin); gets(*&amp;amp;new_node-&amp;gt;data.tenDeTai); cout&amp;lt;&amp;lt;&amp;quot;Nhap ma De Tai: &amp;quot;; fflush(stdin); cin&amp;gt;&amp;gt;*&amp;amp;new_node-&amp;gt;data.maDeTai; cout&amp;lt;&amp;lt;&amp;quot;Nhap ten SV lam De Tai: &amp;quot;; fflush(stdin); gets(*&amp;amp;new_node-&amp;gt;data.</description>
     </item>
     
     <item>
       <title>Quản Lý Sinh Viên</title>
-      <link>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</link>
+      <link>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</link>
       <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/FITHOU-UnderWorld/FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</guid>
+      <guid>https://FITHOU-UnderWorld.github.io/post/ctdl_btl_quan_ly_sinh_vien/</guid>
       <description>#include&amp;lt;iostream&amp;gt; using namespace std; #include&amp;lt;string&amp;gt; #include&amp;lt;fstream&amp;gt; // khai báo cấu trúc ngày tháng năm sinh struct date { int ngay; int thang; int nam; }; typedef struct date DATE; // hàm đọc dữ liệu ngày tháng năm từ file void Doc_Ngay_Thang_Nam(ifstream &amp;amp;filein, DATE &amp;amp;date) { filein &amp;gt;&amp;gt; date.ngay; filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự &#39;/&#39; filein &amp;gt;&amp;gt; date.thang; filein.seekg(1, 1); // dịch sang phải 1 byte để bỏ qua kí tự &#39;/&#39; filein &amp;gt;&amp;gt; date.</description>
     </item>
     
